@@ -10,15 +10,16 @@
     <div class="wrapper">
         <span id="typed"></span>
     </div>
+    <div id="typed-strings">
+        <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+        <p>It <em>types</em> out sentences.</p>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script>
     var typed = new Typed('#typed', {
-        /**
-        *@property {number}
-        */
         typeSpeed: 130,
-        strings:['Yo!',"I'm not Bored with you"]
+        stringsElement: '#typed-strings'
      });
     </script>
 </body>
