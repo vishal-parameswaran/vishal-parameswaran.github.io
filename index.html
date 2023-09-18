@@ -1,27 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/app.css">
-    <title>Document</title> 
+    <title>Document</title>
 </head>
+
 <body>
     <div class="wrapper">
         <span id="typed"></span>
-    </div>
-    <div id="typed-strings">
-        <p>Yo!</p>
-        <p>This is my Website!</p>
-        <p>Check out my <a href="https://github.com/vishal-parameswaran">Git</a></p>
-    </div>
+        <span id="profile"></span>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <script>
-    var typed = new Typed('#typed', {
-        typeSpeed: 130,
-        stringsElement: '#typed-strings'
-     });
+        const typed = new TypeIt("#typed", {
+            speed: 0,
+            lifelike: true,
+        })
+            .type(":: running early hook [udev]<br>")
+            .pause(40)
+            .type(":: running hook [udev]<br>")
+            .pause(40)
+            .options({ speed: 40 })
+            .type("███")
+            .type("███")
+            .type("███")
+            .type("███")
+            .type("███")
+            .type("███")
+            .type("███")
+            .type("███")
+            .type("███")
+            .type("███ 100%<br>")
+            .options({ speed: 0 })
+            .type(":: Triggering uevents...<br>")
+            .pause(40)
+            .type(":: performing fsck on '/dev/sda3'<br>")
+            .pause(40)
+            .type("arch: recovering journal<br>")
+            .pause(40)
+            .options({ speed: 40 })
+            .type("███")
+            .type("███")
+            .type("███")
+            .type("███")
+            .type("███")
+            .type("███")
+            .type("███")
+            .type("███")
+            .type("███")
+            .type("███ 100%<br>")
+            .options({ speed: 0 })
+            .type("arch: clean, 111/128016 files, 109513/512000 blocks<br>")
+            .pause(40)
+            .type(":: mounting '/dev/sda3' on real root<br>")
+            .pause(40)
+            .type(":: running cleanup hook [base]<br>")
+            .pause(40)
+            .empty()
+            .go();
+        let width = screen.width;
+
+        if (width <= 600) {
+            typed
+                .reset()
+                .options({ speed: 1 })
+                .type(`<pre id="mobile_width">
+██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗    ████████╗ ██████╗  
+██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝    ╚══██╔══╝██╔═══██╗
+██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗         ██║   ██║   ██║
+██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝         ██║   ██║   ██║
+╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗       ██║   ╚██████╔╝
+ ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝       ╚═╝    ╚═════╝ 
+                                                                                              
+██╗   ██╗██╗███████╗██╗  ██╗ █████╗ ██╗   ██╗  ███████╗ 
+██║   ██║██║██╔════╝██║  ██║██╔══██╗██║   ╚█║  ██╔════╝ 
+██║   ██║██║███████╗███████║███████║██║    ╚╝  ███████╗ 
+╚██╗ ██╔╝██║╚════██║██╔══██║██╔══██║██║        ╚════██║ 
+ ╚████╔╝ ██║███████║██║  ██║██║  ██║███████╗   ███████║ 
+  ╚═══╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝   ╚══════╝ 
+                                                                                                              
+██████╗  ██████╗ ███╗   ███╗ █████╗ ██╗███╗   ██╗                             
+██╔══██╗██╔═══██╗████╗ ████║██╔══██╗██║████╗  ██║                             
+██║  ██║██║   ██║██╔████╔██║███████║██║██╔██╗ ██║                             
+██║  ██║██║   ██║██║╚██╔╝██║██╔══██║██║██║╚██╗██║                             
+██████╔╝╚██████╔╝██║ ╚═╝ ██║██║  ██║██║██║ ╚████║                             
+╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝    
+                            </pre>`)
+                .options({ speed: 2 })
+                .break()
+                .break()
+                .break()
+                .type("[root@vishiso /]#   ")
+                .pause(60)
+                .options({ speed: 100 })
+                .type("ls")
+                .break()
+                .pause(10)
+                .options({ speed: 5 })
+                .type("<pre>   <a hre=''>resume</a>      <button onclick='portfolio()'>portfolio</button>      <button onclick='me()'>me?</button></pre>")
+                .break()
+                .go();
+
+        }
+        else if (width > 600 && width <= 992) {
+            typed
+                .reset()
+                .options({ speed: 1 })
+                .type(`<pre id="tablet_width">
+██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗    ████████╗ ██████╗
+██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝    ╚══██╔══╝██╔═══██╗ 
+██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗         ██║   ██║   ██║
+██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝         ██║   ██║   ██║ 
+╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗       ██║   ╚██████╔╝ 
+ ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝       ╚═╝    ╚═════╝
+ 
+██╗   ██╗██╗███████╗██╗  ██╗ █████╗ ██╗   ██╗  ███████╗    ██████╗  ██████╗ ███╗   ███╗ █████╗ ██╗███╗   ██╗
+██║   ██║██║██╔════╝██║  ██║██╔══██╗██║   ╚█║  ██╔════╝    ██╔══██╗██╔═══██╗████╗ ████║██╔══██╗██║████╗  ██║
+██║   ██║██║███████╗███████║███████║██║    ╚╝  ███████╗    ██║  ██║██║   ██║██╔████╔██║███████║██║██╔██╗ ██║
+╚██╗ ██╔╝██║╚════██║██╔══██║██╔══██║██║        ╚════██║    ██║  ██║██║   ██║██║╚██╔╝██║██╔══██║██║██║╚██╗██║
+ ╚████╔╝ ██║███████║██║  ██║██║  ██║███████╗   ███████║    ██████╔╝╚██████╔╝██║ ╚═╝ ██║██║  ██║██║██║ ╚████║
+  ╚═══╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝   ╚══════╝    ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
+                            </pre>`)
+                .options({ speed: 2 })
+                .break()
+                .break()
+                .break()
+                .type("[root@vishiso /]#   ")
+                .pause(60)
+                .options({ speed: 100 })
+                .type("ls")
+                .break()
+                .pause(10)
+                .options({ speed: 5 })
+                .type("<pre>   <a hre=''>resume</a>      <button onclick='portfolio()'>portfolio</button>      <button onclick='me()'>me?</button></pre>")
+                .break()
+                .go();
+
+        }
+        else if (width > 992 && width <= 1280) {
+            typed
+                .reset()
+                .options({ speed: 1 })
+                .type(`<pre id="laptop_width">
+██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗    ████████╗ ██████╗     ██╗   ██╗██╗███████╗██╗  ██╗ █████╗ ██╗   ██╗  ███████╗
+██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝    ╚══██╔══╝██╔═══██╗    ██║   ██║██║██╔════╝██║  ██║██╔══██╗██║   ╚█║  ██╔════╝ 
+██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗         ██║   ██║   ██║    ██║   ██║██║███████╗███████║███████║██║    ╚╝  ███████╗ 
+██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝         ██║   ██║   ██║    ╚██╗ ██╔╝██║╚════██║██╔══██║██╔══██║██║        ╚════██║ 
+╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗       ██║   ╚██████╔╝     ╚████╔╝ ██║███████║██║  ██║██║  ██║███████╗   ███████║ 
+ ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝       ╚═╝    ╚═════╝       ╚═══╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝   ╚══════╝ 
+                                                                                                                                                
+██████╗  ██████╗ ███╗   ███╗ █████╗ ██╗███╗   ██╗                                                                                               
+██╔══██╗██╔═══██╗████╗ ████║██╔══██╗██║████╗  ██║                                                                                               
+██║  ██║██║   ██║██╔████╔██║███████║██║██╔██╗ ██║                                                                                               
+██║  ██║██║   ██║██║╚██╔╝██║██╔══██║██║██║╚██╗██║                                                                                               
+██████╔╝╚██████╔╝██║ ╚═╝ ██║██║  ██║██║██║ ╚████║                                                                                               
+╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝   
+                            </pre>`)
+                .options({ speed: 2 })
+                .break()
+                .break()
+                .break()
+                .type("[root@vishiso /]#   ")
+                .pause(60)
+                .options({ speed: 100 })
+                .type("ls")
+                .break()
+                .pause(10)
+                .options({ speed: 5 })
+                .type("<pre>   <a hre=''>resume</a>      <button onclick='portfolio()'>portfolio</button>      <button onclick='me()'>me?</button></pre>")
+                .break()
+                .go();
+        }
+        else {
+            typed
+                .reset()
+                .options({ speed: 1 })
+                .type(`<pre id="max_width">
+██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗    ████████╗ ██████╗     ██╗   ██╗██╗███████╗██╗  ██╗ █████╗ ██╗   ██╗  ███████╗    ██████╗  ██████╗ ███╗   ███╗ █████╗ ██╗███╗   ██╗
+██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝    ╚══██╔══╝██╔═══██╗    ██║   ██║██║██╔════╝██║  ██║██╔══██╗██║   ╚█║  ██╔════╝    ██╔══██╗██╔═══██╗████╗ ████║██╔══██╗██║████╗  ██║
+██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗         ██║   ██║   ██║    ██║   ██║██║███████╗███████║███████║██║    ╚╝  ███████╗    ██║  ██║██║   ██║██╔████╔██║███████║██║██╔██╗ ██║
+██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝         ██║   ██║   ██║    ╚██╗ ██╔╝██║╚════██║██╔══██║██╔══██║██║        ╚════██║    ██║  ██║██║   ██║██║╚██╔╝██║██╔══██║██║██║╚██╗██║
+╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗       ██║   ╚██████╔╝     ╚████╔╝ ██║███████║██║  ██║██║  ██║███████╗   ███████║    ██████╔╝╚██████╔╝██║ ╚═╝ ██║██║  ██║██║██║ ╚████║
+ ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝       ╚═╝    ╚═════╝       ╚═══╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝   ╚══════╝    ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
+                            </pre>`)
+                .options({ speed: 2 })
+                .break()
+                .break()
+                .break()
+                .type("[root@vishiso /]#   ")
+                .pause(60)
+                .options({ speed: 100 })
+                .type("ls")
+                .break()
+                .pause(10)
+                .options({ speed: 5 })
+                .type("<pre>   <a hre=''>resume</a>      <button onclick='portfolio()'>portfolio</button>      <button onclick='me()'>me?</button></pre>")
+                .go();
+        }
+        typed.destroy()
+        const profile = new TypeIt("#profile", {
+            speed: 0,
+            lifelike: true,
+        }).go();
+
+        function portfolio() {
+            profile.reset().go();
+            profile
+                .type("[root@vishiso /]#   ")
+                .options({ speed: 10 })
+                .type("cd portfolio")
+                .break()
+                .options({ speed: 0 })
+                .type("[root@vishiso /]~/portfolio#   ")
+                .options({ speed: 10 })
+                .type("ls")
+                .type("<pre>   brief.ai      vishalsort      suicide_predictor</pre>")
+                .type("<pre>   praedico      chiacago_safety_scorer</pre>")
+                .flush()
+        }
+        function me() {
+            profile.reset().go();
+            profile
+                .type("[root@vishiso /]#   ")
+                .options({ speed: 10 })
+                .type("cd me")
+                .break()
+                .options({ speed: 0 })
+                .type("[root@vishiso /]~/me#   ")
+                .options({ speed: 55 })
+                .type("ls")
+                .break()
+                .type("<pre>   me.txt</pre>")
+                .options({ speed: 0 })
+                .type("[root@vishiso /]~/me#   ")
+                .options({ speed: 55 })
+                .type("cat me.txt")
+                .break()
+                .options({ speed: 10 })
+                .type("<p id='aboutme'>Yo! I'm Vishal. An avid developer/gamer/reader/soccer enjoyer/f1 enjoyerdesign geek/diy idiot/bad dj/loud music enjoyer.While I might not have a blog/ linkedin presence/social media presence announcing my superiority in development/gaming/reading/soccer/F1/Design/DIY/DJing/soft music enjoyment, I can assure you I am GOOD at something. Contact me for anything job related or if you have questions at vishalparameswaran96+questions@gmail.com. I can assure you, that while I might not answer your question, I can atleast confuse you more.<br><br><b>Hasta la vista, baby.</b></p>")
+                .flush()
+        }
     </script>
 </body>
+
 </html>
