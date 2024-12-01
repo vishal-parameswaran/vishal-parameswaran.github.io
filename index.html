@@ -198,7 +198,7 @@
                 .break()
                 .pause(10)
                 .options({ speed: 5 })
-                .type("<pre>   <a hre=''>resume</a>      <button onclick='portfolio()'>portfolio</button>      <button onclick='me()'>me?</button></pre>")
+                .type("<pre>   <a href=''>resume</a>      <button onclick='me()'>me?</button>      <a href='portfolio.html'>portfolio</button></pre>")
                 .go();
         }
         typed.destroy()
@@ -207,21 +207,6 @@
             lifelike: true,
         }).go();
 
-        function portfolio() {
-            profile.reset().go();
-            profile
-                .type("[root@vishiso /]#   ")
-                .options({ speed: 10 })
-                .type("cd portfolio")
-                .break()
-                .options({ speed: 0 })
-                .type("[root@vishiso /]~/portfolio#   ")
-                .options({ speed: 10 })
-                .type("ls")
-                .type("<pre>   brief.ai      vishalsort      suicide_predictor</pre>")
-                .type("<pre>   praedico      chiacago_safety_scorer</pre>")
-                .flush()
-        }
         function me() {
             profile.reset().go();
             profile
